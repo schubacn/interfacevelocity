@@ -1,10 +1,8 @@
 
-
 import numpy as np
 
 from matplotlib import pyplot as plt
 from matplotlib.mlab import griddata
-
 
 def make_map(x_array, 
              y_array, 
@@ -27,8 +25,8 @@ def make_map(x_array,
         x_array: an array-like with the x_values of each point
         y_array: an array-like with the y_values of each point
         value_array: an array-like with values to plot at each point
-        point_spacing: a number that controls the distance between points in the 
-            final output.  Higher numbers give lower resolution.  
+        point_spacing: a number that controls the distance between points in 
+            the final output.  Higher numbers give lower resolution.  
         cmap: a string with a valid matplotlib cmap
         title: string title to display on top of the map
         scale_min: lower bound for the color map
@@ -36,8 +34,8 @@ def make_map(x_array,
         save_location: string filename to output, if desired
     '''
     
-    xsteps = int((max(x_array) - min(x_array)) / point_spacing) # resolution in x
-    ysteps = int((max(y_array) - min(y_array)) / point_spacing) # resolution in y
+    xsteps = int((max(x_array) - min(x_array)) / point_spacing)#resolution in x
+    ysteps = int((max(y_array) - min(y_array)) / point_spacing)#resolution in y
     xi = np.linspace(min(x_array), max(x_array), xsteps)
     yi = np.linspace(min(y_array), max(y_array), ysteps)
     grid = griddata(x_array, y_array, value_array, xi, yi, interp='linear') 

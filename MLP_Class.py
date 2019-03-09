@@ -7,8 +7,19 @@ import matplotlib.pyplot as plt
 
 from sklearn.utils import shuffle
 
+def make_batches(n, batch_size):
+    """Generator to create slices containing batch_size elements, from 0 to n.
 
-from Utils_A import make_batches
+    The last slice may contain less than batch_size elements, when batch_size
+    does not divide n.
+    """
+    start = 0
+    for _ in range(int(n // batch_size)):
+        end = start + batch_size
+        yield slice(start, end)
+        start = end
+    if start < n:
+        yield slice(start, n) 
 
 class MLP_Regressor_With_Autoencoder():
     
