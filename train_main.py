@@ -11,7 +11,7 @@ import tensorflow as tf
 
 from sklearn.model_selection import train_test_split
 
-from mlp_class import MLP_Regressor_With_Autoencoder
+from mlp import MLP_Regressor_With_Autoencoder
 from make_map import make_map
 from data_import_utils import import_data_2Y, Scaler
 
