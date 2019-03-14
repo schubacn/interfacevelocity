@@ -9,14 +9,9 @@ The model can be trained and run using train_main.py.  Additional utility functi
 
 The following software versions were used:
 
-python 3.6.6
-
-tensorflow 1.10
-
-numpy 1.15
-
-matplotlib 2.2.3
-
-pandas 0.23.4
-
-scikit-learn 0.19.1
+* python 3.6.6
+* tensorflow 1.10
+* numpy 1.15
+* matplotlib 2.2.3
+* pandas 0.23.4
+* scikit-learn 0.19.1
